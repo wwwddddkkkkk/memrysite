@@ -97,9 +97,8 @@ button { font: inherit; cursor: pointer; }
 }
 .brand { display: flex; align-items: center; gap: 10px; }
 .brand .logo-mark {
-  width: 30px; height: 30px; border-radius: 9px;
+  width: 30px; height: 30px;
   display: block;
-  object-fit: cover;
 }
 .brand .wordmark {
   font-family: 'Archivo Black', sans-serif; font-size: 19px; letter-spacing: -0.015em; color: var(--ink);
