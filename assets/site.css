@@ -484,10 +484,6 @@ button { font: inherit; cursor: pointer; }
   background: var(--ink);
   width: 22px; border-radius: 4px;
 }
-@media (max-width: 760px) {
-  /* hide the cramped desktop tab row on mobile — the dot pager below is the only pager there */
-  .feat-tabs { display: none; }
-}
 
 /* =========================================================================
    EXAMPLE COLLECTIONS — horizontal carousel + grid
