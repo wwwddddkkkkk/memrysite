@@ -3,8 +3,7 @@
   "name": "memrysite",
   "compatibility_date": "2026-05-27",
   "assets": {
-    "directory": ".",
-    "html_handling": "none"
+    "directory": "."
   },
   "observability": {
     "enabled": true
