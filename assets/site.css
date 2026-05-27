@@ -464,15 +464,13 @@ button { font: inherit; cursor: pointer; }
   .feat-device .mini { width: 200px; }
 }
 
-/* mobile pagination dots — same language as the hero's phone-state dots */
+/* feature pager dots — sits below the card on all viewports, same language as hero phone-state dots */
 .feat-dots {
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
-  padding: 18px 12px 20px;
-  border-top: 1px solid var(--hair);
-  background: var(--white);
+  padding: 22px 0 0;
 }
 .feat-dot {
   width: 7px; height: 7px; border-radius: 50%;
@@ -487,8 +485,7 @@ button { font: inherit; cursor: pointer; }
   width: 22px; border-radius: 4px;
 }
 @media (max-width: 760px) {
-  .feat-dots { display: flex; }
-  /* hide the cramped tab row on mobile — the dot pager takes over */
+  /* hide the cramped desktop tab row on mobile — the dot pager below is the only pager there */
   .feat-tabs { display: none; }
 }
 
