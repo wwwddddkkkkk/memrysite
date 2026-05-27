@@ -465,29 +465,27 @@ button { font: inherit; cursor: pointer; }
   .feat-device .mini { width: 200px; }
 }
 
-/* mobile pagination dots — replace the scrolly tab row at narrow widths */
+/* mobile pagination dots — same language as the hero's phone-state dots */
 .feat-dots {
   display: none;
   justify-content: center;
   align-items: center;
-  gap: 4px;
-  padding: 14px 12px 16px;
+  gap: 8px;
+  padding: 18px 12px 20px;
   border-top: 1px solid var(--hair);
   background: var(--white);
 }
 .feat-dot {
-  border: 0; background: transparent;
-  min-width: 34px; height: 30px;
-  padding: 0 8px;
-  border-radius: 999px;
-  font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.08em;
-  color: var(--ink30);
-  cursor: pointer;
-  transition: background .18s, color .18s, transform .18s;
+  width: 7px; height: 7px; border-radius: 50%;
+  background: rgba(17,17,17,0.20);
+  border: 0; padding: 0; cursor: pointer;
+  font-size: 0; color: transparent;       /* hide the "01" text — buttons stay labelled via aria-label */
+  transition: background .25s, width .25s, border-radius .25s;
 }
-.feat-dot:hover { background: var(--paper2); color: var(--ink60); }
+.feat-dot:hover { background: rgba(17,17,17,0.45); }
 .feat-dot[aria-selected="true"] {
-  background: var(--ink); color: var(--cream);
+  background: var(--ink);
+  width: 22px; border-radius: 4px;
 }
 @media (max-width: 760px) {
   .feat-dots { display: flex; }
