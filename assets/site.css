@@ -97,9 +97,9 @@ button { font: inherit; cursor: pointer; }
 }
 .brand { display: flex; align-items: center; gap: 10px; }
 .brand .logo-mark {
-  width: 30px; height: 30px; border-radius: 9px; background: var(--ink);
-  display: grid; place-items: center; color: var(--cream);
-  font-family: 'Archivo Black', sans-serif; font-size: 17px; letter-spacing: -0.02em;
+  width: 30px; height: 30px; border-radius: 9px;
+  display: block;
+  object-fit: cover;
 }
 .brand .wordmark {
   font-family: 'Archivo Black', sans-serif; font-size: 19px; letter-spacing: -0.015em; color: var(--ink);
@@ -234,7 +234,7 @@ button { font: inherit; cursor: pointer; }
   filter: drop-shadow(0 18px 28px rgba(17,17,17,0.16));
   animation: floaty 7s ease-in-out infinite;
 }
-.float.f1 { top: 4%;  left: 1%;  width: 150px; animation-delay: -1.2s; }
+.float.f1 { top: 4%; left: auto; right: calc(50% + 130px); width: 150px; animation-delay: -1.2s; }
 .float.f2 { top: 12%; right: 1%;  width: 130px; animation-delay: -2.4s; }
 .float.f3 { bottom: 18%; left: 1%; width: 160px; animation-delay: -3.6s; }
 .float.f4 { bottom: 4%; right: 4%; width: 140px; animation-delay: -4.8s; }
@@ -272,7 +272,7 @@ button { font: inherit; cursor: pointer; }
   }
   .phone .screen { border-radius: 33px; }
   /* tighter floats that peek from the corners of the phone */
-  .float.f1 { top: 0;    left: 0;    width: 118px; }
+  .float.f1 { top: 0;    left: 0;    right: auto; width: 118px; }
   .float.f2 { top: 14%;  right: 0;   width: 100px; }
   .float.f3 { bottom: 18%; left: 0;  width: 122px; }
   .float.f4 { bottom: 0; right: 0;   width: 110px; }
@@ -463,6 +463,36 @@ button { font: inherit; cursor: pointer; }
 @media (max-width: 1024px) {
   .feat-device { padding: 32px; }
   .feat-device .mini { width: 200px; }
+}
+
+/* mobile pagination dots — replace the scrolly tab row at narrow widths */
+.feat-dots {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 14px 12px 16px;
+  border-top: 1px solid var(--hair);
+  background: var(--white);
+}
+.feat-dot {
+  border: 0; background: transparent;
+  min-width: 34px; height: 30px;
+  padding: 0 8px;
+  border-radius: 999px;
+  font-family: 'Geist Mono', monospace; font-size: 11px; letter-spacing: 0.08em;
+  color: var(--ink30);
+  cursor: pointer;
+  transition: background .18s, color .18s, transform .18s;
+}
+.feat-dot:hover { background: var(--paper2); color: var(--ink60); }
+.feat-dot[aria-selected="true"] {
+  background: var(--ink); color: var(--cream);
+}
+@media (max-width: 760px) {
+  .feat-dots { display: flex; }
+  /* hide the cramped tab row on mobile — the dot pager takes over */
+  .feat-tabs { display: none; }
 }
 
 /* =========================================================================

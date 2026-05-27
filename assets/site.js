@@ -44,26 +44,43 @@
   const tablist = document.querySelector('[data-feat-tabs]');
   if (tablist) {
     const tabs = [...tablist.querySelectorAll('.feat-tab')];
+    const dots = [...document.querySelectorAll('[data-feat-dots] .feat-dot')];
     const panels = [...document.querySelectorAll('[data-feat-panel]')];
     const activate = (key) => {
       tabs.forEach(t => t.setAttribute('aria-selected', String(t.dataset.feat === key)));
+      dots.forEach(d => d.setAttribute('aria-selected', String(d.dataset.featDot === key)));
       panels.forEach(p => {
         const on = p.dataset.featPanel === key;
         p.style.display = on ? '' : 'none';
         if (on) { p.style.animation = 'none'; void p.offsetWidth; p.style.animation = ''; }
       });
     };
-    tabs.forEach(t => t.addEventListener('click', () => { activate(t.dataset.feat); paused = true; }));
-    activate(tabs[0].dataset.feat);
 
-    let i = 0, paused = false;
+    let i = 0, paused = false, timer = null;
+    const startTimer = () => {
+      if (timer) clearInterval(timer);
+      timer = setInterval(() => {
+        if (paused || reduce) return;
+        i = (i + 1) % tabs.length;
+        activate(tabs[i].dataset.feat);
+      }, 4500);
+    };
+
+    const jumpTo = (key) => {
+      const idx = tabs.findIndex(t => t.dataset.feat === key);
+      if (idx < 0) return;
+      i = idx;
+      activate(key);
+      startTimer();
+    };
+
+    tabs.forEach(t => t.addEventListener('click', () => jumpTo(t.dataset.feat)));
+    dots.forEach(d => d.addEventListener('click', () => jumpTo(d.dataset.featDot)));
+
+    activate(tabs[0].dataset.feat);
     tablist.addEventListener('mouseenter', () => paused = true);
     tablist.addEventListener('mouseleave', () => paused = false);
-    setInterval(() => {
-      if (paused || reduce) return;
-      i = (i + 1) % tabs.length;
-      activate(tabs[i].dataset.feat);
-    }, 4500);
+    startTimer();
   }
 
   // --- scroll reveal --------------------------------------------------------
