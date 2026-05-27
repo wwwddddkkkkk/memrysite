@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://memryworld.com/sitemap.xml
