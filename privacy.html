@@ -96,10 +96,10 @@
         <h4>Contents</h4>
         <ul>
           <li><a href="#where">Where your data lives</a></li>
-          <li><a href="#information">1. Information we collect</a></li>
+          <li><a href="#information">1. Information involved</a></li>
           <li><a href="#use">2. How we use information</a></li>
           <li><a href="#content">3. User content</a></li>
-          <li><a href="#photos">4. Photos &amp; location</a></li>
+          <li><a href="#photos">4. Photos, camera &amp; location</a></li>
           <li><a href="#sharing">5. Data sharing</a></li>
           <li><a href="#third-party">6. Third-party services</a></li>
           <li><a href="#retention">7. Data retention</a></li>
@@ -107,8 +107,9 @@
           <li><a href="#rights">9. Your rights &amp; international data</a></li>
           <li><a href="#children">10. Children's privacy</a></li>
           <li><a href="#security">11. Security</a></li>
-          <li><a href="#changes">12. Changes to this policy</a></li>
-          <li><a href="#contact">13. Contact us</a></li>
+          <li><a href="#future">12. Future plans</a></li>
+          <li><a href="#changes">13. Changes to this policy</a></li>
+          <li><a href="#contact">14. Contact us</a></li>
         </ul>
       </aside>
 
@@ -119,85 +120,110 @@
           Last updated · June 3, 2026
         </div>
 
-        <p>Memry ("we," "our," or "us") respects your privacy. This Privacy Policy explains how Memry handles information when you use our mobile application and website.</p>
+        <p>Memry ("we," "our," or "us") respects your privacy. This Privacy Policy explains how Memry handles information when you use our iOS app and website.</p>
 
         <!-- Highlight summary -->
         <div class="highlight-card" id="where">
           <span class="hc-eyebrow"><span class="hc-dot"></span> Where your data lives</span>
           <h3>Memry is local-first. Your collections live on your device, and optionally sync through your own iCloud — never on our servers.</h3>
-          <p>You sign in with Sign in with Apple. Your collections, items, photos, notes, dates, and locations are stored locally on your device. If you have iCloud sync turned on for Memry, they also sync across your devices through your own iCloud (CloudKit). Either way, Memry does not run a separate cloud copy of your content. You stay in control of your iCloud through Apple's privacy settings at all times.</p>
+          <p>Your collections, items, photos, notes, dates, and locations are stored on your iPhone — by default, that is the only place they live. If you turn on iCloud sync for Memry in iOS Settings, the same content also syncs across your Apple devices through your own iCloud (via Apple's CloudKit framework). Either way, <strong>Memry does not run a server for your content</strong>, and we use no analytics, crash-reporting, advertising, or cross-app tracking SDKs of any kind.</p>
           <div class="hc-pills">
             <span class="hc-pill"><svg width="12" height="12" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M11.182.008C11.148-.03 9.923.023 8.857 1.18c-1.066 1.156-.902 2.482-.878 2.516.024.034 1.52.087 2.475-1.258.955-1.345.762-2.391.728-2.43Zm3.314 11.733c-.048-.096-2.325-1.234-2.113-3.422.212-2.189 1.675-2.789 1.698-2.854.023-.065-.597-.79-1.254-1.157a3.692 3.692 0 0 0-1.563-.434c-.108-.003-.483-.095-1.254.116-.508.139-1.653.589-1.968.607-.316.018-1.256-.522-2.267-.665-.647-.125-1.333.131-1.824.328-.49.196-1.422.754-2.074 2.237-.652 1.482-.311 3.83-.067 4.56.244.729.625 1.924 1.273 2.796.576.984 1.34 1.667 1.659 1.899.319.232 1.219.386 1.843.067.502-.308 1.408-.485 1.766-.472.357.013 1.061.154 1.782.539.571.197 1.111.115 1.652-.105.541-.221 1.324-1.059 2.238-2.758.347-.79.505-1.217.473-1.282Z"/></svg> Sign in with Apple</span>
             <span class="hc-pill"><svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M7 16a4 4 0 010-8 5 5 0 019.6-1.5A4 4 0 0119 16H7z" stroke="currentColor" stroke-width="1.6"/></svg> Local-first · optional iCloud sync</span>
-            <span class="hc-pill"><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M7 1l5.5 3v3.5c0 3.3-2.4 5.5-5.5 6.5C3.9 13 1.5 10.8 1.5 7.5V4L7 1z" stroke="currentColor" stroke-width="1.2"/></svg> No Memry-run user database</span>
-            <span class="hc-pill"><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M5 1h8v8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg> You can sign out or delete any time</span>
+            <span class="hc-pill"><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M7 1l5.5 3v3.5c0 3.3-2.4 5.5-5.5 6.5C3.9 13 1.5 10.8 1.5 7.5V4L7 1z" stroke="currentColor" stroke-width="1.2"/></svg> No Memry-run content servers</span>
+            <span class="hc-pill"><svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M1 13L13 1M5 1h8v8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg> No analytics, no trackers, no ads</span>
           </div>
         </div>
 
-        <h2 id="information">1. Information we collect</h2>
-        <p>Memry is designed to collect as little as possible. Depending on how you use the app, the following information may be involved:</p>
-        <h3>From Sign in with Apple</h3>
-        <p>When you sign in, Apple shares a unique identifier and the name and email address you choose to share (which may be a private relay address generated by Apple). We use this only to identify your account inside the app. You can revoke this access at any time in your Apple ID settings.</p>
-        <p>If you choose <em>Hide My Email</em> during sign-in, Memry will only ever see and contact you at the <code>@privaterelay.appleid.com</code> address Apple generates — we never receive your real email address.</p>
-        <h3>Stored on your device — optionally synced through your iCloud</h3>
-        <p>Your user-created content — collection names, item names, notes, photos, dates, locations, tags, and visual preferences — is stored locally on your device. If you have iCloud sync turned on for Memry, it also syncs across your devices through Apple's CloudKit framework, in your own iCloud account. Either way, Memry does not maintain a separate copy on its own infrastructure. Access to any synced data is governed by Apple's terms and your iCloud settings.</p>
-        <h3>Diagnostics</h3>
-        <p>Memry does not include any analytics or crash-reporting SDK and does not collect diagnostic information of its own. If you opt in under <em>iOS Settings → Privacy &amp; Security → Analytics &amp; Improvements → Share With App Developers</em>, Apple may share aggregated, anonymized analytics and crash reports with us through Xcode Organizer. Apple's privacy controls govern this and the reports do not identify you. You can turn this sharing off at any time in the same iOS setting.</p>
-        <h3>Support information</h3>
-        <p>If you contact us, we receive your email address and the content of your message. We use this only to respond to your request.</p>
+        <h2 id="information">1. Information involved</h2>
+        <p>Memry is designed to involve as little information as possible. Depending on how you use the app, the following may apply:</p>
+
+        <h3>Sign in with Apple identifiers (on-device only)</h3>
+        <p>When you first sign in, Apple shares a stable Apple user identifier, the name you choose to share, and an email address you choose to share (which may be a private relay address Apple generates — <em>Hide My Email</em>). These are stored only inside your iPhone, in the operating system's secure on-device storage (Keychain). Memry does not transmit them to any server we operate, and if you choose Hide My Email, we never see your real address.</p>
+        <p>These identifiers are used solely to recognize that you are signed in on this device, display your name in the app (if you chose to share one), and show which account is signed in on the Settings screen.</p>
+
+        <h3>Your content (on-device, optionally synced through your iCloud)</h3>
+        <p>Collections, items, notes, dates, locations, tags, photos, and theme preferences you create are stored locally on your iPhone. If you have iCloud sync turned on for Memry, the same content also syncs to your other Apple devices through Apple's CloudKit framework, in <strong>your own iCloud account</strong> — not in any account belonging to Memry.</p>
+
+        <h3>Photos and camera</h3>
+        <p>With your permission (granted through standard iOS prompts), Memry can read photos from your library or use your camera to attach photos to items. Photos are copied into Memry's local app directory on your device and, if iCloud sync is on, synced through your own iCloud. Memry never uploads them to its own servers, does not share them, and does not analyze them for any purpose other than displaying them in your collection.</p>
+
+        <h3>Location</h3>
+        <p>With your permission, Memry can tag an item with your current location. Reading your location and turning coordinates into a place name are done on your device by Apple's Core Location framework. Location data is stored locally and optionally synced through your own iCloud — <strong>Memry never receives it</strong>.</p>
+
+        <h3>Purchases (Apple StoreKit)</h3>
+        <p>If you subscribe to a paid plan or make a one-time purchase, the transaction is handled entirely by Apple's StoreKit framework. Memry stores only your current entitlement state on your device. We do not receive or store your billing information.</p>
+
+        <h3>Notifications (local only)</h3>
+        <p>Memry uses <strong>only local notifications</strong> — gentle reminders to revisit older memories and a weekly review prompt, scheduled by your iPhone. There is no push notification server, and Memry does not receive or store a device push token.</p>
+
+        <h3>Diagnostics (none collected by Memry)</h3>
+        <p>Memry includes <strong>no analytics SDK, no crash-reporting SDK, no advertising SDK, and no cross-app tracking</strong>. We use no third-party SDKs of any kind for telemetry. If you opt in under <em>iOS Settings → Privacy &amp; Security → Analytics &amp; Improvements → Share With App Developers</em>, Apple may share aggregated, anonymized crash and performance reports with developers through Xcode Organizer; those reports are governed by Apple's own privacy controls and do not identify you. You can turn this sharing off at any time in the same iOS setting.</p>
+
+        <h3>Account-deletion exchange (transient)</h3>
+        <p>When you tap "Delete account" inside the app, Memry sends a short-lived Apple authorization code to a small Cloudflare Worker we operate. The Worker uses this code <strong>exclusively</strong> to ask Apple's Sign in with Apple service to revoke our authorization token, then immediately discards it. The Worker keeps no database, writes no logs, and stores no part of your email, user ID, or any other identifier. This is a single, transient, real-time exchange.</p>
+
+        <h3>Support correspondence</h3>
+        <p>If you email <a class="link" href="mailto:support@memryworld.com">support@memryworld.com</a>, we receive the address you wrote from (real or Hide My Email relay) and the content of your message. We use this only to respond to you and to keep a reasonable record of the conversation.</p>
 
         <h2 id="use">2. How we use information</h2>
         <p>We use information to:</p>
         <ul>
-          <li>Authenticate your Memry account through Sign in with Apple.</li>
-          <li>Provide and operate Memry's core features.</li>
-          <li>Allow your collections and items to sync across your devices through your own iCloud, if you have iCloud sync turned on for Memry.</li>
-          <li>Respond to support requests.</li>
-          <li>Improve app stability, design, and functionality.</li>
-          <li>Protect the security and integrity of the service.</li>
-          <li>Comply with legal obligations.</li>
+          <li>Recognize and sign you in to your Memry account on your device.</li>
+          <li>Run the app's core features (collections, items, photos, locations).</li>
+          <li>Sync your collections to your own iCloud, if you have iCloud sync turned on for Memry.</li>
+          <li>Complete account-deletion requests via the transient Sign in with Apple token-revocation flow described in §1.</li>
+          <li>Respond to support emails you send us.</li>
+          <li>Comply with applicable legal obligations.</li>
         </ul>
 
         <h2 id="content">3. User content</h2>
-        <p>Your collections, photos, notes, locations, and other personal content belong to you. They live on your device and, if you have iCloud sync turned on for Memry, in your own iCloud account. We do not access, sell, share, or monetize them. We do not train any model on your content.</p>
+        <p>Your collections, photos, notes, locations, and other personal content belong to you. They live on your device and, if you have iCloud sync turned on for Memry, in your own iCloud account. We do not access, sell, share, or monetize them. <strong>We do not train any model on your content.</strong></p>
 
         <h2 id="photos">4. Photos, camera, and location</h2>
         <p><strong>Photos and camera.</strong> With your permission, Memry can access your photo library to attach an existing photo to an item, or use your camera to take a new photo to attach. Photos you add — including any embedded metadata they may carry (such as date, time, or GPS coordinates) — are stored locally on your device, and synced to your other devices through your own iCloud if iCloud sync is on. Memry does not upload your photos to its own servers, does not share them, and does not analyze them for any purpose other than displaying them in your collection.</p>
-        <p><strong>Location.</strong> With your permission, Memry can tag an item with your current location. Location data is stored locally on your device, and synced through your own iCloud if iCloud sync is on.</p>
-        <p><strong>Revocation.</strong> You can revoke camera, photo library, or location permissions at any time in iOS Settings → Memry, without affecting items you have already saved.</p>
+        <p><strong>Location.</strong> With your permission, Memry can tag an item with your current location. Location is read and reverse-geocoded by Apple's Core Location framework on your device. It is stored locally and optionally synced through your own iCloud — Memry never receives it.</p>
+        <p><strong>Revocation.</strong> You can revoke camera, photo library, or location permissions at any time in <em>iOS Settings → Memry</em>, without affecting items you have already saved.</p>
 
         <h2 id="sharing">5. Data sharing</h2>
-        <p>We do not sell your personal information. Because your content lives on your device and (optionally) in your own iCloud, there is little for us to share. We may share limited information only when necessary to:</p>
+        <p>We do not sell, rent, or share your personal information for advertising or any other commercial purpose. Because your content lives on your device and (optionally) in your own iCloud, there is essentially nothing for us to share. We may share limited information only when necessary to:</p>
         <ul>
-          <li>Operate the app through Apple's platform services (Sign in with Apple, iCloud / CloudKit, push notifications).</li>
-          <li>Respond to your support requests.</li>
+          <li>Operate the app through Apple's platform services (Sign in with Apple, iCloud / CloudKit, App Store, StoreKit).</li>
+          <li>Run the transient account-deletion call described in §1.</li>
+          <li>Respond to your support email.</li>
           <li>Comply with applicable laws or valid legal processes.</li>
           <li>Protect the rights, safety, and security of users or the service.</li>
         </ul>
 
         <h2 id="third-party">6. Third-party services</h2>
-        <p>Memry is built on Apple platform services and keeps third parties to a minimum:</p>
+        <p>Memry is built on Apple platform services and uses essentially no other third parties:</p>
         <ul>
-          <li><strong>Apple</strong> — Sign in with Apple, iCloud, CloudKit, push notifications, App Store, and TestFlight. Apple's handling of this data is governed by the <a class="link" href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a>.</li>
-          <li><strong>Optional services</strong> — if we later add anything beyond Apple's platform (for example, an email provider for support replies), we will list it here and update this policy.</li>
+          <li><strong>Apple</strong> — Sign in with Apple, iCloud, CloudKit, App Store, StoreKit, TestFlight. Apple's handling of this data is governed by the <a class="link" href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a>.</li>
+          <li><strong>Cloudflare</strong> — Memry's account-deletion request travels through a single Cloudflare Worker that exists <strong>only</strong> to call Apple's Sign in with Apple token-revocation endpoint. The Worker keeps no logs and stores nothing about you.</li>
         </ul>
-        <p>We do not use third-party advertising, ad networks, or cross-site trackers.</p>
+        <p>We do not use third-party advertising, ad networks, analytics SDKs, crash-reporting SDKs, or cross-app trackers.</p>
 
         <h2 id="retention">7. Data retention</h2>
-        <p>Because your content is stored on your device and (optionally) in your own iCloud, you control how long it is kept. If you delete a collection or item inside the app, it is removed from your device immediately, and from your iCloud copy if iCloud sync is on. If you uninstall the app without iCloud sync, the local copy is removed with the app.</p>
-        <p>The limited identifiers we receive through Sign in with Apple are kept only as long as needed to operate your account. We keep support correspondence as long as reasonably necessary to handle your request and comply with legal obligations.</p>
+        <p>Because your content is stored on your device and (optionally) in your own iCloud, you control how long it is kept.</p>
+        <ul>
+          <li>Delete an item or collection inside the app → removed immediately from your device, and from your iCloud copy if sync is on.</li>
+          <li>Sign out of Memry → your local data is preserved on the device so you can sign back in.</li>
+          <li>Delete your account inside the app → all local Memry data is removed from the device, any iCloud-synced copy is removed from your iCloud, and Memry's Sign in with Apple authorization is revoked via Apple's token-revocation service.</li>
+          <li>Uninstall the app without iCloud sync → the local copy is removed with the app.</li>
+        </ul>
+        <p>We will respond to verified email-based deletion requests within 30 days.</p>
 
         <h2 id="deletion">8. Data deletion requests</h2>
-        <p>You can delete your data in two ways:</p>
+        <p>You can delete your data in three ways:</p>
         <ul>
-          <li><strong>Inside the app.</strong> Delete individual items or full collections — they are removed from your device immediately, and from your iCloud copy if iCloud sync is on. You can also delete your entire Memry account from inside the app: this removes the identifier we hold for you and revokes Memry's Sign in with Apple authorization on your behalf via Apple's token-revocation service. Separately, you can revoke Sign in with Apple access at any time in your Apple ID settings.</li>
-          <li><strong>By email.</strong> Contact <a class="link" href="mailto:support@memryworld.com?subject=Data%20Deletion%20Request">support@memryworld.com</a> with the subject "Data Deletion Request." We will delete any identifier we hold and confirm by email. We may need to verify your request first.</li>
+          <li><strong>Sign out (keep your data).</strong> <em>Settings → Account → Sign out.</em> Local data remains on the device until you decide to delete it; you can sign back in at any time and resume.</li>
+          <li><strong>Delete account (in-app).</strong> <em>Settings → Account → Delete account.</em> This removes all local Memry data, removes any iCloud-synced copy from your iCloud, and revokes our Sign in with Apple authorization via Apple's token-revocation service.</li>
+          <li><strong>By email.</strong> Contact <a class="link" href="mailto:support@memryworld.com?subject=Data%20Deletion%20Request">support@memryworld.com</a> with the subject "Data Deletion Request." We will confirm by email.</li>
         </ul>
-        <p>We will respond to verified deletion requests within 30 days.</p>
+        <p>You can also revoke Memry's Sign in with Apple access at any time in <em>iOS Settings → [your name] → Sign in with Apple</em>.</p>
 
         <h2 id="rights">9. Your rights and international data</h2>
-        <p>Depending on where you live, you may have certain rights regarding personal information we hold about you, including the right to access, correct, port, or delete it, and to object to or restrict certain processing. To exercise any of these rights, contact <a class="link" href="mailto:support@memryworld.com">support@memryworld.com</a>.</p>
-        <p>Because your collections, items, photos, notes, dates, and locations live on your device and (optionally) in your own iCloud, you can exercise most of these rights directly on the device or through Apple's iCloud and Apple ID settings. Memry itself only holds your Sign in with Apple identifier, the email address Apple shares with us, and any support correspondence.</p>
+        <p>Depending on where you live, you may have rights to access, correct, port, delete, restrict, or object to processing of personal information about you. Because your content lives on your device and (optionally) in your own iCloud, most of these rights are already in your hands — you can view, edit, export (via standard iOS tools), and delete your data without contacting us. For anything we cannot satisfy on the device alone, contact <a class="link" href="mailto:support@memryworld.com">support@memryworld.com</a>.</p>
         <p><strong>California residents (CCPA / CPRA).</strong> We do not sell or share personal information for cross-context behavioral advertising. You have the right to know what we collect, to delete it, to correct it, and to non-discrimination for exercising these rights.</p>
         <p><strong>EEA, UK, and Switzerland (GDPR / UK GDPR).</strong> We rely on your consent (for example, Sign in with Apple, photos, and location permissions) and on the performance of our agreement with you (to operate the app) as our legal bases for processing. Any limited personal data we hold is processed under Apple's standard contractual arrangements for any transfers outside your region.</p>
 
@@ -205,12 +231,22 @@
         <p>Memry is not directed to children under 13, or the equivalent minimum age of digital consent in the user's jurisdiction (for example, 16 in parts of the EU and UK). We do not knowingly collect personal information from children below those ages. If you believe a child has provided personal information, contact <a class="link" href="mailto:support@memryworld.com">support@memryworld.com</a>.</p>
 
         <h2 id="security">11. Security</h2>
-        <p>Memry relies on Apple's platform security: Sign in with Apple, encrypted iCloud storage and transport, and the iOS sandbox. We add reasonable safeguards on our side for the limited information we receive. However, no method of transmission or storage is completely secure.</p>
+        <p>Memry relies on Apple's platform security: Sign in with Apple, on-device secure storage (Keychain), iOS sandboxing, and encrypted iCloud storage and transport (for users who opt into iCloud sync). The account-deletion Cloudflare Worker uses TLS for all transit. No method of transmission or storage is completely secure.</p>
 
-        <h2 id="changes">12. Changes to this policy</h2>
+        <h2 id="future">12. Future plans</h2>
+        <p>We may, in the future, build a small server-side account directory to support optional features such as product update emails, account recovery, win-back emails, or cross-platform accounts beyond iCloud. If and when we do, <strong>we will</strong>:</p>
+        <ul>
+          <li>Update this Privacy Policy with a clear description of what is collected and stored, <em>before</em> any such feature is enabled.</li>
+          <li>Update our App Store Connect "App Privacy" disclosures to reflect any newly collected data.</li>
+          <li>Register Hide My Email source domains with Apple if we send mail to relay addresses.</li>
+          <li>Continue to honor your right to delete that data.</li>
+        </ul>
+        <p>Until that happens, the practices described in this document — local-first storage, no analytics, no Memry-run content server — are what is in place.</p>
+
+        <h2 id="changes">13. Changes to this policy</h2>
         <p>We may update this Privacy Policy from time to time. The updated version will be posted on this page with a new "Last updated" date.</p>
 
-        <h2 id="contact">13. Contact us</h2>
+        <h2 id="contact">14. Contact us</h2>
         <p>For privacy questions, support requests, or data deletion requests, contact <a class="link" href="mailto:support@memryworld.com">support@memryworld.com</a>.</p>
         <p>For general inquiries, contact <a class="link" href="mailto:info@memryworld.com">info@memryworld.com</a>.</p>
 

@@ -116,13 +116,25 @@
           </details>
 
           <details>
-            <summary>How do I request account or data deletion? <span class="icon"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="#111" stroke-width="1.6" stroke-linecap="round"/></svg></span></summary>
-            <div class="body">Memry uses Sign in with Apple and stores your collections locally on your device — and, if you have iCloud sync turned on for Memry, in your own iCloud. You can delete any collection or item directly inside the app, and revoke Sign in with Apple access from your Apple ID settings at any time. To also delete the limited identifier we hold for your account, email <a class="link" href="mailto:support@memryworld.com?subject=Data%20Deletion%20Request">support@memryworld.com</a> with the subject "Data Deletion Request."</div>
+            <summary>How do I sign out or delete my account? <span class="icon"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="#111" stroke-width="1.6" stroke-linecap="round"/></svg></span></summary>
+            <div class="body">You have three options, depending on what you want to keep:
+              <ul style="margin:10px 0 0;padding-left:18px;">
+                <li><strong>Sign out (keep your data).</strong> <em>Settings → Account → Sign out.</em> Local data stays on the device so you can sign back in later.</li>
+                <li><strong>Delete account inside the app.</strong> <em>Settings → Account → Delete account.</em> This removes all local Memry data, removes any iCloud-synced copy from your iCloud, and revokes Memry's Sign in with Apple authorization on your behalf via Apple's token-revocation service.</li>
+                <li><strong>By email.</strong> Send "Data Deletion Request" to <a class="link" href="mailto:support@memryworld.com?subject=Data%20Deletion%20Request">support@memryworld.com</a>.</li>
+              </ul>
+              You can also revoke Memry's Sign in with Apple access at any time in <em>iOS Settings → [your name] → Sign in with Apple</em>.
+            </div>
           </details>
 
           <details>
             <summary>Where are my collections stored? <span class="icon"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="#111" stroke-width="1.6" stroke-linecap="round"/></svg></span></summary>
-            <div class="body">Locally on your device by default. If you turn on iCloud sync for Memry, your collections also sync across your Apple devices through Apple's CloudKit framework, in your own iCloud account. Memry doesn't keep a separate copy on its own servers. See the <a class="link" href="/privacy#where">Privacy Policy</a> for details.</div>
+            <div class="body">Locally on your iPhone by default — that's the only place your collections, items, photos, notes, and locations live unless you opt in. If you turn on iCloud sync for Memry, the same content also syncs across your Apple devices through your own iCloud (via Apple's CloudKit framework). Either way, <strong>Memry does not run a server for your content</strong>. See the <a class="link" href="/privacy#where">Privacy Policy</a> for details.</div>
+          </details>
+
+          <details>
+            <summary>Does Memry track me or collect analytics? <span class="icon"><svg viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="#111" stroke-width="1.6" stroke-linecap="round"/></svg></span></summary>
+            <div class="body">No. Memry ships <strong>no analytics SDK, no crash-reporting SDK, no advertising SDK, and no cross-app tracking</strong>. We use no third-party SDKs of any kind for telemetry. The only time data leaves your device is when you tap "Delete account" — a single, transient call to Apple's Sign in with Apple revocation service through a stateless Cloudflare Worker that keeps no logs and stores nothing about you. See the <a class="link" href="/privacy">Privacy Policy</a> for the full picture.</div>
           </details>
 
           <details>
@@ -148,13 +160,13 @@
         </div>
 
         <h2 id="deletion">Data &amp; deletion</h2>
-        <p>Memry uses Sign in with Apple and iCloud, so most of your data lives in your own iCloud account, not on Memry's servers. You can:</p>
+        <p>Memry is <strong>local-first</strong>: by default your collections live only on your iPhone. iCloud sync is optional. We do not run a server for your content. You have three ways to manage deletion:</p>
         <ul>
-          <li>Delete individual items or whole collections directly inside the app — they're removed from your iCloud immediately.</li>
-          <li>Revoke Sign in with Apple access at any time in <em>Settings → Apple ID → Sign-In &amp; Security → Sign in with Apple</em>.</li>
-          <li>Email <a class="link" href="mailto:support@memryworld.com?subject=Data%20Deletion%20Request">support@memryworld.com</a> with the subject <em>Data Deletion Request</em> to also delete the limited account identifier we hold.</li>
+          <li><strong>Sign out</strong> — <em>Settings → Account → Sign out.</em> Local data is preserved on the device for next sign-in.</li>
+          <li><strong>Delete account in-app</strong> — <em>Settings → Account → Delete account.</em> Removes all local Memry data, removes any iCloud-synced copy from your iCloud, and revokes Memry's Sign in with Apple authorization via Apple's token-revocation service.</li>
+          <li><strong>By email</strong> — <a class="link" href="mailto:support@memryworld.com?subject=Data%20Deletion%20Request">support@memryworld.com</a> with subject <em>Data Deletion Request</em>, to delete any limited account identifier we hold.</li>
         </ul>
-        <p>For full details, see the <a class="link" href="/privacy">Privacy Policy</a>.</p>
+        <p>You can also revoke Memry's Sign in with Apple access at any time in <em>iOS Settings → [your name] → Sign in with Apple</em>. We respond to verified email deletion requests within 30 days. For full details, see the <a class="link" href="/privacy">Privacy Policy</a>.</p>
 
         <h2 id="bugs">Bug reports</h2>
         <p>To help us reproduce the issue, please include:</p>
