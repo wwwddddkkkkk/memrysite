@@ -149,7 +149,7 @@
         <p>With your permission (granted through standard iOS prompts), Memry can read photos from your library or use your camera to attach photos to items. Photos are copied into Memry's local app directory on your device and, if iCloud sync is on, synced through your own iCloud. Memry never uploads them to its own servers, does not share them, and does not analyze them for any purpose other than displaying them in your collection.</p>
 
         <h3>Location</h3>
-        <p>With your permission, Memry can tag an item with your current location. Reading your location and turning coordinates into a place name are done on your device by Apple's Core Location framework. Location data is stored locally and optionally synced through your own iCloud — <strong>Memry never receives it</strong>.</p>
+        <p>With your permission, Memry can tag an item with your current location <strong>while you are using the app</strong>. Memry requests only Core Location's "when in use" authorization — it never asks for background or "Always" location access. Reading your location and turning coordinates into a place name are done on your device by Apple's Core Location framework. Location data is stored locally and optionally synced through your own iCloud — <strong>Memry never receives it</strong>.</p>
 
         <h3>Purchases (Apple StoreKit)</h3>
         <p>If you subscribe to a paid plan or make a one-time purchase, the transaction is handled entirely by Apple's StoreKit framework. Memry stores only your current entitlement state on your device. We do not receive or store your billing information.</p>
@@ -182,7 +182,7 @@
 
         <h2 id="photos">4. Photos, camera, and location</h2>
         <p><strong>Photos and camera.</strong> With your permission, Memry can access your photo library to attach an existing photo to an item, or use your camera to take a new photo to attach. Photos you add — including any embedded metadata they may carry (such as date, time, or GPS coordinates) — are stored locally on your device, and synced to your other devices through your own iCloud if iCloud sync is on. Memry does not upload your photos to its own servers, does not share them, and does not analyze them for any purpose other than displaying them in your collection.</p>
-        <p><strong>Location.</strong> With your permission, Memry can tag an item with your current location. Location is read and reverse-geocoded by Apple's Core Location framework on your device. It is stored locally and optionally synced through your own iCloud — Memry never receives it.</p>
+        <p><strong>Location.</strong> With your permission, Memry can tag an item with your current location <strong>while you are using the app</strong> — Memry only requests Core Location's "when in use" authorization, never background or "Always" location access. Location is read and reverse-geocoded by Apple's Core Location framework on your device. It is stored locally and optionally synced through your own iCloud — Memry never receives it.</p>
         <p><strong>Revocation.</strong> You can revoke camera, photo library, or location permissions at any time in <em>iOS Settings → Memry</em>, without affecting items you have already saved.</p>
 
         <h2 id="sharing">5. Data sharing</h2>
